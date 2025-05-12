@@ -130,8 +130,19 @@ But it is important to use it responsibly and ethically. Here are some guideline
 
 7. Assess if decisions made using the data could contribute to bias, discrimination or unfair profiling.
 
-8. Validate quality of scraped data, and recognize limitations in ensuring relevance and accuracy inherent with web data.  
+   
+## Scraping Rule Modification
 
-9. Document your scraping process thoroughly for replicability, transparency and accountability.
+### What was changed:
+The scraper originally collected the homepage's main headline. I modified it to instead collect the **latest podcast title** from [The Daily Pennsylvanian's Podcast page](https://www.thedp.com/section/podcasts).
 
-10. Continuously re-evaluate your scraping program against applicable laws and ethical principles.
+### How it works:
+The scraper now targets the first `<h3>` tag with class `headline` on the podcasts page using BeautifulSoup.
+
+This reflects a more specialized and potentially informative content stream than the rotating homepage headline.
+
+9. Validate quality of scraped data, and recognize limitations in ensuring relevance and accuracy inherent with web data.  
+
+10. Document your scraping process thoroughly for replicability, transparency and accountability.
+
+11. Continuously re-evaluate your scraping program against applicable laws and ethical principles.
